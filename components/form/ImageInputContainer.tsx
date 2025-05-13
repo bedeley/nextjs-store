@@ -6,7 +6,7 @@ import FormContainer from "./FormContainer";
 import ImageInput from "./ImageInput";
 import { SubmitButton } from "./Buttons";
 import { type actionFunction } from "@/utils/types";
-import { HeightIcon } from "@radix-ui/react-icons";
+// import { HeightIcon } from "@radix-ui/react-icons";
 
 type ImageInputContainerProps = {
   image: string;
