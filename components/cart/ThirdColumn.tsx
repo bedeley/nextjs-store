@@ -9,11 +9,11 @@ import { useToast } from "../ui/use-toast";
 
 const ThirdColumn = ({ quantity, id }: { quantity: number; id: string }) => {
   const [amount, setAmount] = useState(quantity);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleAmountChange = async (value: number) => {
-    isLoading;
+    setIsLoading(true);
     toast({ description: "Calculating..." });
     const result = await updateCartItemAction({
       amount: value,
@@ -30,7 +30,7 @@ const ThirdColumn = ({ quantity, id }: { quantity: number; id: string }) => {
         amount={amount}
         setAmount={handleAmountChange}
         mode={Mode.CartItem}
-        isLoading={false}
+        isLoading={isLoading}
       />
       <FormContainer action={removeCartItemAction}>
         <input type="hidden" name="id" value={id} />
