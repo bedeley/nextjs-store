@@ -8,8 +8,8 @@ import { SignInButton } from "@clerk/nextjs";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { LuTrash2, LuSquarePen } from "react-icons/lu";
 // import { LuSquarePen } from "react-icons/lu";
-import { text } from "stream/consumers";
-import { ReceiptRussianRuble } from "lucide-react";
+// import { text } from "stream/consumers";
+// import { ReceiptRussianRuble } from "lucide-react";
 
 type btnSize = "default" | "lg" | "sm";
 

@@ -9,11 +9,11 @@ import { useToast } from "../ui/use-toast";
 
 const ThirdColumn = ({ quantity, id }: { quantity: number; id: string }) => {
   const [amount, setAmount] = useState(quantity);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
   const handleAmountChange = async (value: number) => {
-    setIsLoading(true);
+    isLoading;
     toast({ description: "Calculating..." });
     const result = await updateCartItemAction({
       amount: value,
